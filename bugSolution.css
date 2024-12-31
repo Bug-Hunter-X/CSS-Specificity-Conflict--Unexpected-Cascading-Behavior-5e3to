@@ -1,0 +1,21 @@
+The solution addresses the specificity conflict by increasing the specificity of the rule targeting paragraphs within the `.container`. One approach is to use a more specific selector, or if absolutely necessary and carefully considered, use the `!important` flag. Note that overuse of `!important` is generally discouraged.
+
+```css
+.container p {
+  color: blue !important; /* Use with caution */
+}
+p {
+  color: red;
+}
+```
+
+Alternatively, reorder the CSS rules, placing the more specific rule after the more general one (if there are no other conflicting rules). This approach relies on the cascading order, where the last rule encountered wins.
+
+```css
+p {
+  color: red;
+}
+.container p {
+  color: blue;
+}
+```
