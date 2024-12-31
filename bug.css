@@ -1,0 +1,10 @@
+The following CSS code snippet exhibits an uncommon error:  Specificity conflicts and unexpected cascading behavior. The intention is to style all paragraphs within the `.container` class, but due to conflicting specificity, the more general paragraph selector might override the more specific selector. 
+
+```css
+.container p {
+  color: blue;
+}
+p {
+  color: red;
+}
+```
